@@ -4,7 +4,7 @@ comments: true
 
 # Estrutura sequencial
 
-1. Faça um Programa que mostre a mensagem "Alo mundo" na tela:
+1. Faça um programa que mostre a mensagem "Alo mundo" na tela:
 
 	=== "Código"
 		```pyodide
@@ -27,8 +27,8 @@ comments: true
 		número = input('Digite um número: ')
 		print(f'O número informado foi {número}')
 		```
-	
-3. Faça um Programa que peça dois números e imprima a soma:
+
+3. Faça um programa que peça dois números e imprima a soma:
 
 	=== "Código"
 		```pyodide
@@ -41,8 +41,8 @@ comments: true
 		número_2 = float(input('Digite um número: '))
 		print(número_1 + número_2)
 		```
-	
-4. Faça um Programa que peça as 4 notas bimestrais e mostre a média. 
+
+4. Faça um programa que peça as 4 notas bimestrais e mostre a média. 
 
 	=== "Código"
 		```pyodide
@@ -59,7 +59,7 @@ comments: true
 		print(f'Média {média}')
 		```
 
-5. Faça um Programa que converta metros para centímetros:
+5. Faça um programa que converta metros para centímetros:
 
 	=== "Código"
 		```pyodide
@@ -70,7 +70,7 @@ comments: true
 		centimentros = metros * 100
 		print(f'{metros} metros são {centimentros} em centímetros.')
 		```
-	
+
 6. Faça um programa que peça o raio de um círculo, calcule e mostre sua área:
 
 	=== "Código"
@@ -147,7 +147,7 @@ comments: true
 	- A soma do triplo do primeiro com o terceiro.
 	- O terceiro elevado ao cubo.
 
-   	=== "Código"
+	=== "Código"
 		```pyodide
 		```
 	=== "Resposta"
@@ -161,13 +161,13 @@ comments: true
 		print(f'O terceiro elevado ao cubo: {real ** 3}')
 		```
 
-12. Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula: 
+12. Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula:
 
 	```math title="Formula"
 	(72.7 * altura) - 58
 	```
 
-   	=== "Código"
+	=== "Código"
 		```pyodide
 		```
 
@@ -192,7 +192,7 @@ comments: true
 	- quanto pagou ao sindicato.
     - o salário líquido.
 	- calcule os descontos e o salário líquido, conforme a tabela abaixo:
-    
+
 	```
     + Salário Bruto : R$
     - IR (11%) : R$
@@ -202,11 +202,11 @@ comments: true
 	```
 
     > Obs.: Salário Bruto - Descontos = Salário Líquido.
-	
+
 	=== "Código"
 		```pyodide
 		```
-	
+
 16. Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
 
 	=== "Código"
