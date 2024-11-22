@@ -161,26 +161,39 @@ comments: true
 		print(f'O terceiro elevado ao cubo: {real ** 3}')
 		```
 
-12. Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula:
+12. Tendo como dados de entrada um arquivo em Gigabytes, construa um algoritmo que faça a conversão para Megabytes, usando a seguinte fórmula:
 
 	```math title="Formula"
-	(72.7 * altura) - 58
+    Gigabytes * 1024
 	```
 
 	=== "Código"
 		```pyodide
 		```
 
+	=== "Resposta"
+		```pyodide
+		tamanho_gb = float(input('Digite o tamnho do arquivo em GBs: '))
+		tamanho_mb = tamanho_gb * 1_024
+		print(f'O arquivo tem {tamanho_mb} MBs')
+		```
 
-13. Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
-	- Para homens: `(72.7 * h) - 58`
-	- Para mulheres: `(62.1 * h) - 44.7`
+13. Tendo como dados de entrada um arquivo em Gigabytes, construa um algoritmo que faça a conversão para Megabytes, usando as seguintes fórmulas:
+	- Para Megabytes: `Gigabytes * 1024`
+	- Para Kilobytes: `Gigabytes * 1024 * 1024`
 
 	=== "Código"
 		```pyodide
 		```
+	=== "Resposta"
+		```pyodide
+		tamanho_gb = float(input('Digite o tamnho do arquivo em GBs: '))
+		tamanho_mb = tamanho_gb * 1_024
+		tamanho_kb = tamanho_gb * 1_024 * 1_204
+		print(f'O arquivo tem {tamanho_mb}MBs ou {tamanho_kb}KBs.')
+		```
 
-14. João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
+14. João, um pescador, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
 
 	=== "Código"
 		```pyodide
@@ -214,6 +227,7 @@ comments: true
 		```
 
 17. Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+
 	- Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
 	- comprar apenas latas de 18 litros;
 	- comprar apenas galões de 3,6 litros;
