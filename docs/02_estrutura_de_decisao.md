@@ -4,7 +4,7 @@ comments: true
 
 # Estrutura de decisão
 
-1. Faça um Programa que peça dois números e imprima o maior deles.
+1. Faça um programa que peça dois números e imprima o maior deles.
 
 	=== "Código"
 		```pyodide
@@ -27,13 +27,13 @@ comments: true
 		```pyodide
 		```
 
-3. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+3. Faça um programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
 
 	=== "Código"
 		```pyodide
 		```
 
-4. Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+4. Faça um programa que verifique se uma letra digitada é vogal ou consoante.
 
 	=== "Código"
 		```pyodide
@@ -49,13 +49,13 @@ comments: true
 		```pyodide
 		```
 
-6. Faça um Programa que leia três números e mostre o maior deles:
+6. Faça um programa que leia três números e mostre o maior deles:
 
 	=== "Código"
 		```pyodide
 		```
 
-7. Faça um Programa que leia três números e mostre o maior e o menor deles:
+7. Faça um programa que leia três números e mostre o maior e o menor deles:
 
 	=== "Código"
 		```pyodide
@@ -67,13 +67,13 @@ comments: true
 		```pyodide
 		```
 
-9. Faça um Programa que leia três números e mostre-os em ordem decrescente:
+9. Faça um programa que leia três números e mostre-os em ordem decrescente:
 
 	=== "Código"
 		```pyodide
 		```
 
-10. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+10. Faça um programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 
 	=== "Código"
 		```pyodide
@@ -119,7 +119,7 @@ comments: true
 		```pyodide
 		```
 
-13. Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+13. Faça um programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
 
 	=== "Código"
 		```pyodide
@@ -141,7 +141,7 @@ comments: true
 		```pyodide
 		```
 
-15. Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+15. Faça um programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
 
     Dicas:
 
@@ -168,19 +168,19 @@ comments: true
 		```pyodide
 		```
 
-17. Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
+17. Faça um programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
 
 	=== "Código"
 		```pyodide
 		```
 
-18. Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
+18. Faça um programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
 
 	=== "Código"
 		```pyodide
 		```
 
-19. Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+19. Faça um programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
 
     Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:
     326 = 3 centenas, 2 dezenas e 6 unidades
@@ -190,7 +190,7 @@ comments: true
 		```pyodide
 		```
 
-20. Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar:
+20. Faça um programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar:
 
     - A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
 
@@ -202,24 +202,24 @@ comments: true
 		```pyodide
 		```
 
-21. Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.
+21. Faça um programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.
 
     Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
     Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
 
-22. Faça um Programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão).
+22. Faça um programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão).
 
 	=== "Código"
 		```pyodide
 		```
 
-23. Faça um Programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize uma função de arredondamento.
+23. Faça um programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize uma função de arredondamento.
 
 	=== "Código"
 		```pyodide
 		```
 
-24. Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+24. Faça um programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
 
     - par ou ímpar;
 
