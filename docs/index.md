@@ -15,9 +15,9 @@ Esta é uma lista com sugestões de programas para iniciantes em programação. 
 
 3. [Estrutura de repetição](03_estrutura_de_repeticao.md){:target="_blank"}
 
-**Em breve**:
+4. [Exercícios sobre listas](04_listas.md){:target="_blank"}
 
-4. Exercícios sobre listas
+**Em breve**:
 
 5. Exercícios sobre funções
 
