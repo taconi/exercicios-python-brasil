@@ -107,6 +107,7 @@ Faça um programa que receba a temperatura média de cada mês do ano e armazene
 #### Exercício 14
 
 Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+
 - "Telefonou para a vítima?"
 - "Esteve no local do crime?"
 - "Mora perto da vítima?"
@@ -122,6 +123,7 @@ O programa deve no final emitir uma classificação sobre a participação da pe
 #### Exercício 15
 
 Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada de dados, faça:
+
 - Mostre a quantidade de valores que foram lidos;
 - Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
 - Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
@@ -310,6 +312,7 @@ Maior valor de abono pago: R$ 900.00
 #### Exercício 21
 
 Faça um programa que carregue uma lista com os modelos de cinco carros (exemplo de modelos: FUSCA, GOL, VECTRA etc). Carregue uma outra lista com o consumo desses carros, isto é, quantos quilômetros cada um desses carros faz com um litro de combustível. Calcule e mostre:
+
 - O modelo do carro mais econômico;
 - Quantos litros de combustível cada um dos carros cadastrados consome para percorrer uma distância de 1000 quilômetros e quanto isto custará, considerando um que a gasolina custe R$ 2,25 o litro.
 
