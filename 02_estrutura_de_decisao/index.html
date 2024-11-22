@@ -1,0 +1,1444 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01_estrutura_sequencial/">
+      
+      
+        <link rel="next" href="../03_estrutura_de_repeticao/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Estrutura de decisão - Lista de Exercícios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estrutura-de-decisao" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Lista de Exercícios" class="md-header__button md-logo" aria-label="Lista de Exercícios" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lista de Exercícios
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estrutura de decisão
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Modo noturno"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo noturno" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lista de Exercícios" class="md-nav__button md-logo" aria-label="Lista de Exercícios" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lista de Exercícios
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lista de exercícios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_estrutura_sequencial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estrutura sequencial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Estrutura de decisão
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_estrutura_de_repeticao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estrutura de repetição
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="estrutura-de-decisao">Estrutura de decisão</h1>
+<ol>
+<li>
+<p>Faça um Programa que peça dois números e imprima o maior deles.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Código</label><label for="__tabbed_1_2">Resposta</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-19--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-19--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-19--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-19--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-19--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">exercício_01.py</span><pre><span></span><code><span class="n">número_1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Primeiro número: &#39;</span><span class="p">)</span>
+<span class="n">número_2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Segundo número: &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">número_1</span> <span class="o">&gt;</span> <span class="n">número_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">número_1</span><span class="si">}</span><span class="s1"> é o maior!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">número_1</span> <span class="o">&lt;</span> <span class="n">número_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">número_2</span><span class="si">}</span><span class="s1"> é o maior!&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa que peça um valor e mostre na tela se o valor é positivo ou negativo.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-20--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-20--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-20--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-20--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-20--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-21--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-21--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-21--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-21--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-21--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que verifique se uma letra digitada é vogal ou consoante.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-22--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-22--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-22--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-22--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-22--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:</p>
+<ul>
+<li>A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;</li>
+<li>A mensagem "Reprovado", se a média for menor do que sete;</li>
+<li>A mensagem "Aprovado com Distinção", se a média for igual a dez.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-23--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-23--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-23--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-23--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-23--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que leia três números e mostre o maior deles:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-24--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-24--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-24--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-24--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-24--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que leia três números e mostre o maior e o menor deles:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-25--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-25--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-25--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-25--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-25--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-26--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-26--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-26--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-26--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-26--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que leia três números e mostre-os em ordem decrescente:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-27--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-27--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-27--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-27--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-27--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-28--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-28--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-28--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-28--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-28--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:</p>
+<ul>
+<li>salários até R$ 280,00 (incluindo) : aumento de 20%</li>
+<li>salários entre R$ 280,00 e R$ 700,00 : aumento de 15%</li>
+<li>salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%</li>
+<li>salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:</li>
+<li>o salário antes do reajuste;</li>
+<li>o percentual de aumento aplicado;</li>
+<li>o valor do aumento;</li>
+<li>o novo salário, após o aumento.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-29--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-29--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-29--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-29--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-29--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.</p>
+<p>Desconto do IR:
+- Salário Bruto até 900 (inclusive) - isento</p>
+<ul>
+<li>
+<p>Salário Bruto até 1500 (inclusive) - desconto de 5%</p>
+</li>
+<li>
+<p>Salário Bruto até 2500 (inclusive) - desconto de 10%</p>
+</li>
+<li>
+<p>Salário Bruto acima de 2500 - desconto de 20%</p>
+</li>
+</ul>
+<p>Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.</p>
+<div class="highlight"><pre><span></span><code>Salário Bruto: (5 * 220)        : R$ 1100,00
+(-) IR (5%)                     : R$   55,00  
+(-) INSS ( 10%)                 : R$  110,00
+FGTS (11%)                      : R$  121,00
+Total de descontos              : R$  165,00
+Salário Liquido                 : R$  935,00
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-30--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-30--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-30--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-30--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-30--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-31--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-31--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-31--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-31--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-31--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+    <div class="highlight"><pre><span></span><code>  Média de Aproveitamento  Conceito
+  Entre 9.0 e 10.0        A
+  Entre 7.5 e 9.0         B
+  Entre 6.0 e 7.5         C
+  Entre 4.0 e 6.0         D
+  Entre 4.0 e zero        E
+</code></pre></div></p>
+<p>O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-32--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-32--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-32--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-32--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-32--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.</p>
+<p>Dicas:</p>
+<ul>
+<li>
+<p>Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;</p>
+</li>
+<li>
+<p>Triângulo Equilátero: três lados iguais;</p>
+</li>
+<li>
+<p>Triângulo Isósceles: quaisquer dois lados iguais;</p>
+</li>
+<li>
+<p>Triângulo Escaleno: três lados diferentes; </p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-33--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-33--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-33--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-33--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-33--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:</p>
+<ul>
+<li>Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;</li>
+<li>Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;</li>
+<li>Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;</li>
+<li>Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário; </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-34--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-34--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-34--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-34--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-34--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-35--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-35--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-35--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-35--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-35--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-36--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-36--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-36--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-36--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-36--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.</p>
+<p>Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:
+326 = 3 centenas, 2 dezenas e 6 unidades
+12 = 1 dezena e 2 unidades Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16 </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-37--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-37--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-37--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-37--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-37--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar:</p>
+<ul>
+<li>
+<p>A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;</p>
+</li>
+<li>
+<p>A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;</p>
+</li>
+<li>
+<p>A mensagem "Aprovado com Distinção", se a média for igual a 10. </p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-38--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-38--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-38--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-38--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-38--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.</p>
+<p>Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1. </p>
+</li>
+<li>
+<p>Faça um Programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-39--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-39--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-39--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-39--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-39--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize uma função de arredondamento.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-40--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-40--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-40--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-40--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-40--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:</p>
+<ul>
+<li>
+<p>par ou ímpar;</p>
+</li>
+<li>
+<p>positivo ou negativo;</p>
+</li>
+<li>
+<p>inteiro ou decimal. </p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-41--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-41--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-41--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-41--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-41--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:</p>
+<ul>
+<li>"Telefonou para a vítima?"</li>
+<li>"Esteve no local do crime?"</li>
+<li>"Mora perto da vítima?"</li>
+<li>"Devia para a vítima?"</li>
+<li>"Já trabalhou com a vítima?"</li>
+</ul>
+<p>O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente". </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-42--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-42--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-42--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-42--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-42--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Um posto está vendendo combustíveis com a seguinte tabela de descontos:</p>
+<p>Álcool:</p>
+<ul>
+<li>
+<p>até 20 litros: desconto de 3% por litro</p>
+</li>
+<li>
+<p>acima de 20 litros: desconto de 5% por litro</p>
+</li>
+</ul>
+<p>Gasolina:</p>
+<ul>
+<li>
+<p>até 20 litros: desconto de 4% por litro</p>
+</li>
+<li>
+<p>acima de 20 litros: desconto de 6% por litro</p>
+</li>
+</ul>
+<p>Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-43--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-43--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-43--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-43--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-43--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Uma fruteira está vendendo frutas com a seguinte tabela de preços:</p>
+<div class="highlight"><pre><span></span><code>                      Até 5 Kg           Acima de 5 Kg
+Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
+Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
+</code></pre></div>
+<p>Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-44--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-44--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-44--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-44--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-44--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
+    <div class="highlight"><pre><span></span><code>                      Até 5 Kg           Acima de 5 Kg
+File Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg
+Alcatra         R$ 5,90 por Kg          R$ 6,80 por Kg
+Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
+</code></pre></div></p>
+<p>Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total da compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">Código</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
+<link title="light" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow.min.css" disabled="disabled">
+<link title="dark" rel="alternate stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night-blue.min.css" disabled="disabled">
+
+<div class="pyodide">
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Editor (session: default)</span><span id="exec-45--run" title="Run: press Ctrl-Enter" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7Z"></path></svg></span> Run</span>
+</div>
+<div><pre id="exec-45--editor" class="pyodide-editor"></pre></div>
+<div class="pyodide-editor-bar">
+<span class="pyodide-bar-item">Output</span><span id="exec-45--clear" class="pyodide-bar-item pyodide-clickable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.14 3c-.51 0-1.02.2-1.41.59L2.59 14.73c-.78.77-.78 2.04 0 2.83L5.03 20h7.66l8.72-8.73c.79-.77.79-2.04 0-2.83l-4.85-4.85c-.39-.39-.91-.59-1.42-.59M17 18l-2 2h7v-2"></path></svg></span> Clear</span>
+</div>
+<pre><code id="exec-45--output" class="pyodide-output"></code></pre>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setupPyodide('exec-45--', install=[], themeLight='tomorrow', themeDark='tomorrow_night', session='default');
+});
+</script>
+</p>
+</div>
+</div>
+</div>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../assets/javascripts/pyodide.js"></script>
+      
+    
+  </body>
+</html>
