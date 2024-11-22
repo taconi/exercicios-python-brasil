@@ -94,7 +94,7 @@ async function setupPyodide(idPrefix, install = null, themeLight = 'tomorrow', t
     editor.session.setMode("ace/mode/python");
     setTheme(editor, getTheme(), themeLight, themeDark);
 
-    writeOutput(output, "Initializing...");
+    writeOutput(output, "Iniciando...");
     let pyodide = await pyodidePromise;
     if (install && install.length) {
         micropip = pyodide.pyimport("micropip");
