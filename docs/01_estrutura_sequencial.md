@@ -100,7 +100,7 @@ Faça um programa que calcule a área de um quadrado, em seguida mostre o dobro 
 === "Código"
 	```pyodide
 	```
-	=== "Resposta"
+=== "Resposta"
 	```pyodide
 	lado = float(input('Entre com a medida do lado: '))
 	área = lado ** 2
@@ -139,7 +139,7 @@ C = 5 * ((F-32) / 9).
 	f = float(input('Digite a temperatura em fahrenheit: '))
 	c = 5 * ((f - 32) / 9)
 	print(f'{f} em celsius é: {c}')
-```
+	```
 
 #### Exercício 10
 
