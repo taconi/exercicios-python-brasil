@@ -1,4 +1,7 @@
 site_name: Lista de Exercícios
+site_url: https://exercicios.dunossauro.com/
+repo_url: https://github.com/dunossauro/exercicios-python-brasil
+repo_name: dunossauro/exercicios-python-brasil
 
 theme:
   name: material
