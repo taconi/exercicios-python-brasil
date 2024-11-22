@@ -7,7 +7,7 @@
 		```
 
 	=== "Resposta"
-		```python title="exercício_01.py"
+		```pyodide
 		print('Alo mundo')
 		```
 
@@ -19,7 +19,7 @@
 
 	=== "Resposta"
 
-		```python title="exercício_02.py"
+		```pyodide
 		número = input('Digite um número: ')
 		print(f'O número informado foi {número}')
 		```
@@ -32,7 +32,7 @@
 
 	=== "Resposta"
 
-		```python title="exercício_03.py"
+		```pyodide
 		número_1 = float(input('Digite um número: '))
 		número_2 = float(input('Digite um número: '))
 		print(número_1 + número_2)
@@ -46,11 +46,11 @@
 
 	=== "Resposta"
 
-		```python title="exercício_04.py"
-		nota_1 = input('Digite a nota 1: ')
-		nota_2 = input('Digite a nota 2: ')
-		nota_3 = input('Digite a nota 3: ')
-		nota_4 = input('Digite a nota 4: ')
+		```pyodide
+		nota_1 = float(input('Digite a nota 1: '))
+		nota_2 = float(input('Digite a nota 2: '))
+		nota_3 = float(input('Digite a nota 3: '))
+		nota_4 = float(input('Digite a nota 4: '))
 		média = (nota_1 + nota_2 + nota_3 + nota_4) / 4
 		print(f'Média {média}')
 		```
@@ -60,23 +60,49 @@
 	=== "Código"
 		```pyodide
 		```
+	=== "Resposta"
+		```pyodide
+		metros = float(input('Entre com os métros: '))
+		centimentros = metros * 100
+		print(f'{metros} metros são {centimentros} em centímetros.')
+		```
 	
-6. Faça um Programa que peça o raio de um círculo, calcule e mostre sua área:
+6. Faça um programa que peça o raio de um círculo, calcule e mostre sua área:
 
 	=== "Código"
 		```pyodide
 		```
 
-7. Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+	=== "Resposta"
+		```pyodide
+		raio = float(input('Entre com o raio: '))
+		área = (raio ** 2) * 3.14
+		print(f'A área de círculo com raio {raio} é: {área}')
+		```
+
+7. Faça um programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
 
 	=== "Código"
 		```pyodide
 		```
+	=== "Resposta"
+		```pyodide
+		lado = float(input('Entre com a medida do lado: '))
+		área = lado ** 2
+		print(f'A área de um quadrado de lado {lado} é: {área}')
+		```
 
-8. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+8. Faça um programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
 
 	=== "Código"
 		```pyodide
+		```
+	=== "Resposta"
+		```pyodide
+		valor_hora = float(input('Quanto você ganha por hora: '))
+		horas_mes = float(input('Quantas horas trbalhou esse mês: '))
+		salário = valor_hora * horas_mes
+		print(f'O salário deste mês será: {salário}')
 		```
 
 9. Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
