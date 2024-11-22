@@ -14,9 +14,9 @@ comments: true
 		```python title="exercício_01.py" linenums="1"
 		while True:
 		    valor = int(input('Insira uma nota entre 0 e 10: '))
-			
-			if valor >= 0 and valor <= 10:
-			    break
+
+		    if valor >= 0 and valor <= 10:
+		        break
 		```
 
 2. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
@@ -31,7 +31,7 @@ comments: true
     - Idade: entre 0 e 150;
     - Salário: maior que zero;
     - Estado Civil: 's', 'c', 'v', 'd';
-	
+
 	=== "Código"
 		```pyodide
 		```
@@ -92,7 +92,7 @@ comments: true
 		```
 
 12. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
-	
+
 	```
     Tabuada de 5:
     5 X 1 = 5
@@ -104,7 +104,7 @@ comments: true
 	=== "Código"
 		```pyodide
 		```
-	
+
 
 13. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. Não utilize a função de potência da linguagem.
 
@@ -235,7 +235,7 @@ comments: true
 31. O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e agora possui uma loja de conveniências. Faça um programa que implemente uma caixa registradora rudimentar. O programa deverá receber um número desconhecido de valores referentes aos preços das mercadorias. Um valor zero deve ser informado pelo operador para indicar o final da compra. O programa deve então mostrar o total da compra e perguntar o valor em dinheiro que o cliente forneceu, para então calcular e mostrar o valor do troco. Após esta operação, o programa deverá voltar ao ponto inicial, para registrar a próxima compra. A saída deve ser conforme o exemplo abaixo:
 
 	```
-    Lojas Tabajara 
+    Lojas Tabajara
     Produto 1: R$ 2.20
     Produto 2: R$ 5.80
     Produto 3: R$ 0
@@ -289,7 +289,7 @@ comments: true
     5 X 6 = 30
     5 X 7 = 35
 	```
-	
+
     > Obs: Você deve verificar se o usuário não digitou o final menor que o inicial. 
 
 	=== "Código"
@@ -307,7 +307,7 @@ comments: true
     - Esse funcionário foi contratado em 1995, com salário inicial de R$ 1.000,00;
     - Em 1996 recebeu aumento de 1,5% sobre seu salário inicial;
     - A partir de 1997 (inclusive), os aumentos salariais sempre correspondem ao dobro do percentual do ano anterior.
-	
+
 	Faça um programa que determine o salário atual desse funcionário. Após concluir isto, altere o programa permitindo que o usuário digite o salário inicial do funcionário.
 
 	=== "Código"
@@ -327,7 +327,7 @@ comments: true
     - Número de acidentes de trânsito com vítimas (em 1999). Deseja-se saber:
     - Qual o maior e menor índice de acidentes de transito e a que cidade pertence;
     - Qual a média de veículos nas cinco cidades juntas;
-    - Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio. 
+    - Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.
 
 	=== "Código"
 		```pyodide
@@ -347,7 +347,7 @@ comments: true
 	```
 
     Exemplo de saída do programa:
-	
+
 	```
     Valor da Dívida Valor dos Juros Quantidade de Parcelas  Valor da Parcela
     R$ 1.000,00     0               1                       R$  1.000,00
@@ -372,7 +372,7 @@ comments: true
     Refrigerante    105     R$ 1,00
 	```
 
-    Faça um programa que leia o código dos itens pedidos e as quantidades desejadas. Calcule e mostre o valor a ser pago por item (preço * quantidade) e o total geral do pedido. Considere que o cliente deve informar quando o pedido deve ser encerrado. 
+    Faça um programa que leia o código dos itens pedidos e as quantidades desejadas. Calcule e mostre o valor a ser pago por item (preço * quantidade) e o total geral do pedido. Considere que o cliente deve informar quando o pedido deve ser encerrado.
 
 	=== "Código"
 		```pyodide
@@ -386,9 +386,9 @@ comments: true
     5 - Voto Nulo
     6 - Voto em Branco
 	```
-    
+
 	Faça um programa que calcule e mostre:
-    
+
 	- O total de votos para cada candidato;
     - O total de votos nulos;
 	- O total de votos em branco;
@@ -420,7 +420,7 @@ comments: true
     10 - A
 	```
 
-    Após concluir isto você poderia incrementar o programa permitindo que o professor digite o gabarito da prova antes dos alunos usarem o programa. 
+    Após concluir isto você poderia incrementar o programa permitindo que o professor digite o gabarito da prova antes dos alunos usarem o programa.
 
 	=== "Código"
 		```pyodide
@@ -486,10 +486,10 @@ comments: true
 
 49. Faça um programa que mostre os n termos da Série a seguir:
 
-      S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
+      S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m.
 
-    Imprima no final a soma da série. 
-	
+    Imprima no final a soma da série.
+
 	=== "Código"
 		```pyodide
 		```
@@ -502,9 +502,9 @@ comments: true
 
 51. Faça um programa que mostre os n termos da Série a seguir:
 
-      S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
+      S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m.
 
-    Imprima no final a soma da série. 
+    Imprima no final a soma da série.
 
 	=== "Código"
 		```pyodide
