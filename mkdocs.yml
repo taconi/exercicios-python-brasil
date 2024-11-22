@@ -1,0 +1,29 @@
+site_name: Lista de Exercícios
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+
+plugins:
+- search
+- markdown-exec
+
+markdown_extensions:
+- attr_list
+- pymdownx.superfences
+- pymdownx.inlinehilite
+- pymdownx.tabbed:
+    alternate_style: true
+
+extra_javascript:
+  - assets/javascripts/pyodide.js

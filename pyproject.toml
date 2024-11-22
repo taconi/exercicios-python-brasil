@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "lista-exercicios"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mkdocs = "^1.6.1"
+markdown-exec = {extras = ["ansi"], version = "^1.9.3"}
+mkdocs-material = "^9.5.45"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
