@@ -196,7 +196,7 @@ Gigabytes * 1024
 
 === "Resposta"
 	```pyodide
-	tamanho_gb = float(input('Digite o tamnho do arquivo em GBs: '))
+	tamanho_gb = float(input('Digite o tamanho do arquivo em GBs: '))
 	tamanho_mb = tamanho_gb * 1_024
 	print(f'O arquivo tem {tamanho_mb} MBs')
 	```
@@ -213,7 +213,7 @@ Tendo como dados de entrada um arquivo em Gigabytes, construa um algoritmo que f
 	```
 === "Resposta"
 	```pyodide
-	tamanho_gb = float(input('Digite o tamnho do arquivo em GBs: '))
+	tamanho_gb = float(input('Digite o tamanho do arquivo em GBs: '))
 	tamanho_mb = tamanho_gb * 1_024
 	tamanho_kb = tamanho_gb * 1_024 * 1_204
 	print(f'O arquivo tem {tamanho_mb}MBs ou {tamanho_kb}KBs.')
