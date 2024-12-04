@@ -19,8 +19,12 @@ theme:
         name: Modo noturno
 
 plugins:
-- search
-- markdown-exec
+  - search
+  - markdown-exec
+  - git-authors:
+      show_email_address: false
+      show_line_count: true
+  - git-revision-date-localized
 
 markdown_extensions:
 - attr_list
